@@ -1,21 +1,21 @@
 variable "client_id" {
     description     = " Service principle ID used for deployment"
-    type	       = string
+    type	        = string
 }
 
 variable "client_secret" {
     description     = "The client secret"
-    type	       = string
+    type	        = string
 }
 
 variable "tenant_id" {
     description     = "The tenant id"
-    type	       = string
+    type	        = string
 }
 
 variable "subscription_id" {
     description     = "The subs id"
-    type	       = string
+    type	        = string
 }
 
 variable "name" {
