@@ -17,7 +17,7 @@ namespace Marathon.Server.Azure
             clientId = "e83117cc-02a0-4222-86f6-bd194609cb63";
             clientSecret = "tmP8Q~Hi52gRwTl0irLKllmWjP4jxML_5gIGddyA";
         }
-           public string GetSecret(string SecretName) 
+        public string GetSecret(string SecretName)
         {
             var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
             var client = new SecretClient(vaultUri: new Uri("https://keyvault125347.vault.azure.net/"), credential);

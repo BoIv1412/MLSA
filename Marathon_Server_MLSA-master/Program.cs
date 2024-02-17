@@ -2,8 +2,10 @@ namespace Marathon.Server
 {
     using Marathon.Server.Azure;
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Hosting;
     using Microsoft.Identity.Client.Extensibility;
+    using System;
     using System.Diagnostics;
 
     public class Program
