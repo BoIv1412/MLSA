@@ -1,6 +1,0 @@
-client_id = "5785ab59-0fe8-4c46-b402-b38baa0b52ae"
-client_secret = "ad78Q~WKUSOfJSxQ4nWl.rGHNnOJnnlgNlZQFbJj"
-tenant_id = "84c31ca0-ac3b-4eae-ad11-519d80233e6f"
-subscription_id = "0f1d139f-a64f-4a0b-bb90-2abdea4f9943"
-name = "Test-Marathon-RG"
-location = "eastus"
