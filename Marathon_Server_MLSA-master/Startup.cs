@@ -1,5 +1,6 @@
 namespace Marathon.Server
 {
+    using Marathon.Server.Azure;
     using Marathon.Server.Features.Hubs;
     using Marathon.Server.Features.Tokens;
     using Marathon.Server.Infrastructure.Extensions;
@@ -23,6 +24,18 @@ namespace Marathon.Server
         public void ConfigureServices(IServiceCollection services)
         {
             Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII = true;
+
+            string dbConnectionString = Configuration.GetConnectionString("ConnectionString");
+            //string redisConnectionString = Configuration.GetConnectionString("Redis");
+
+            Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII = true;
+
+            KeyVaultManager keyVaultManager = new KeyVaultManager();
+
+            // Debug.WriteLine(keyVaultManager.GetSecret("Databaza"));
+
+            var gpt = keyVaultManager.GetSecret("db");
+
             services
                  .AddDatabase(this.Configuration)
                  .AddIdentity()
